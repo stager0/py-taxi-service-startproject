@@ -18,7 +18,7 @@ class Car(models.Model):
     driver = models.ManyToManyField(settings.AUTH_USER_MODEL)
 
     def __str__(self):
-        return f"{self.model} {self.manufacturer}"
+        return f"{self.model} ({self.manufacturer.name})"
 
 
 class Driver(AbstractUser):
